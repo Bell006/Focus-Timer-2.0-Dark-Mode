@@ -1,0 +1,196 @@
+:root {
+    font-size: 62.5%;
+
+    --text-primary: #323238;
+    --text-secondary: #ffff;
+    --bg-color: #ffff;
+    --icon-primary-color: #E1E1E6;
+    --icon-secondary-color:  #323238;
+    --card-primary-color: #E1E1E6;
+    --card-secondary-background: #BE54D9;
+
+    --bg-color-darkMode: #323238;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+
+    grid-template-rows: 1fr 10fr;
+}
+
+header {
+    margin: 0 6rem;
+    align-self: flex-end;
+    justify-self: end;
+}
+
+main {
+    justify-self: center;
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    
+    gap: 19rem
+}
+
+span {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12.7rem;
+    line-height: 14.8rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 4.8rem;
+}
+
+div {
+    width: 13.8rem;
+    height: 15rem;
+}
+
+.card {
+    color: var(--icon-primary-color);
+}
+
+.icon {
+    color: var(--icon-secondary-color);
+}
+
+input {
+    width: 9rem;
+    position: relative;
+    left: 2.5rem;
+    bottom: 6rem;
+}
+
+input[type=range] {
+    height: 25px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    background: none;
+}
+
+input[type=range]:focus {
+outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+height: 5px;
+cursor: pointer;
+animation: 0.2s;
+box-shadow: 0px 0px 0px #000000;
+background: white;
+border-radius: 1px;
+border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+box-shadow: 0px 0px 0px #000000;
+border: 1px solid  white;
+height: 18px;
+width: 18px;
+border-radius: 25px;
+background: white;
+cursor: pointer;
+-webkit-appearance: none;
+margin-top: -7px;
+}
+
+input[type=range]::-ms-track {
+width: 100%;
+height: 5px;
+cursor: pointer;
+animation: 0.2s;
+background: transparent;
+border-color: transparent;
+color: transparent;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+background:  white;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+background:  white;
+}
+
+#sounds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+#buttons {
+    display: flex;
+    gap: 4rem;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+#sounds button {
+    transition: 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#sounds button:hover {
+    transform: scale(1.09)
+}
+
+.hide {
+    display: none;
+    opacity: none;
+}
+
+body.dark {
+    background-color: var(--bg-color-darkMode);
+}
+
+body.dark span {
+    color: var(--text-secondary);
+}
+
+body.dark #buttons .play-button {
+   color: var(--text-secondary);
+}
+
+body.dark #buttons .stop-button {
+    color: var(--text-secondary);
+}
+
+body.dark #buttons .pause-button {
+    color: var(--text-secondary);
+}
+
+body.dark #buttons .add-button {
+    color: var(--text-secondary);
+}
+
+body.dark #buttons .decrease-button {
+    color: var(--text-secondary);
+}
+
+body.dark .card {
+    color: #29292E;
+}
+
+body.dark .icon {
+    color: var(--icon-primary-color);
+}
+
+
